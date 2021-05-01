@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatToolbarModule } from '@angular/material/toolbar';
+
 import { MatIconModule } from '@angular/material/icon';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,9 +19,10 @@ import { CreateBeerComponent } from './create-beer/create-beer.component';
     BrowserModule,
     AppRoutingModule,
 
-    MatToolbarModule,
     MatIconModule,
-    
+    MatTabsModule,
+    MatToolbarModule,
+
     BrowserAnimationsModule
   ],
   providers: [],

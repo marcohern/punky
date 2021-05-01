@@ -1,7 +1,16 @@
-<mat-toolbar>
-  <button mat-icon-button class="example-icon" aria-label="Menu">
+<mat-toolbar color="primary">
+  <a mat-icon-button>
     <mat-icon>menu</mat-icon>
-  </button>
-  <span>My Application</span>
+  </a>
+  <span>Punky</span>
+  <span class="spacer"></span>
+  <a mat-icon-button>
+    <mat-icon>favorite</mat-icon>
+  </a>
 </mat-toolbar>
+<nav mat-tab-nav-bar>
+  <a mat-tab-link>Create</a>
+  <a mat-tab-link>Find</a>
+  <a mat-tab-link>Chart</a>
+</nav>
 <router-outlet></router-outlet>
