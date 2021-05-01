@@ -1,16 +1,26 @@
 <mat-toolbar color="primary">
-  <a mat-icon-button>
+  <button mat-icon-button class="example-icon" (click)="sidenav.toggle()" aria-label="Example icon-button with menu icon">
     <mat-icon>menu</mat-icon>
-  </a>
+  </button>
   <span>Punky</span>
   <span class="spacer"></span>
-  <a mat-icon-button>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
     <mat-icon>favorite</mat-icon>
-  </a>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+   <mat-icon>share</mat-icon>
+ </button>
 </mat-toolbar>
-<nav mat-tab-nav-bar>
-  <a mat-tab-link>Create</a>
-  <a mat-tab-link>Find</a>
-  <a mat-tab-link>Chart</a>
-</nav>
-<router-outlet></router-outlet>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav class="sidenav" mode="side" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')">
+    <button mat-icon-button>
+      <mat-icon>menu</mat-icon>
+      Test
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

@@ -9,3 +9,11 @@ body {
 .spacer {
   flex: 1 1 auto;
 }
+
+.content {
+  padding-left: 1em;
+}
+
+.sidenav {
+  width:10em;
+}
