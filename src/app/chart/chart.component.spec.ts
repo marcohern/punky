@@ -1,5 +1,6 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatAutocomplete, MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
 import { PunkyapiService } from '../punkyapi/punkyapi.service';
@@ -17,7 +18,7 @@ describe('ChartComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ ChartComponent ],
-      imports: [HttpClientModule, MatSnackBarModule],
+      imports: [HttpClientModule, MatSnackBarModule, MatAutocompleteModule],
       providers: [
         {provide:ActivatedRoute, useValue: fakeActivatedRoute },
         PunkyapiService,
