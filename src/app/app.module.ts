@@ -16,6 +16,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SidenavModule } from './sidenav/sidenav.module';
+import { TopbarModule } from './topbar/topbar.module';
 
 import { CreateBeerComponent } from './create-beer/create-beer.component';
 
@@ -39,6 +40,7 @@ import { CreateBeerComponent } from './create-beer/create-beer.component';
     MatSliderModule,
     
     SidenavModule,
+    TopbarModule,
 
     BrowserAnimationsModule
   ],
