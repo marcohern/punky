@@ -24,5 +24,10 @@ describe('TopbarComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });  
+
+  it('should render title', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('mat-toolbar span').textContent).toContain('Punky');
   });
 });
