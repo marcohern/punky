@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 
 import { TopbarComponent } from './topbar.component';
 
@@ -8,7 +9,9 @@ describe('TopbarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TopbarComponent ]
+      declarations: [ TopbarComponent ],
+      imports: [MatDialogModule],
+      providers: [MatDialog]
     })
     .compileComponents();
   });
