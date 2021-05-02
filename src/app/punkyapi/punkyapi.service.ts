@@ -51,6 +51,6 @@ export class PunkyapiService {
   }
 
   getBeer(id:string|null): Observable<any> {
-    return this.get<any>('v2/beer/'+id, {});
+    return this.get<any>('v2/beers/'+id, {});
   }
 }

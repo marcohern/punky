@@ -1,5 +1,75 @@
-<mat-card>
-  <mat-card-title>Title</mat-card-title>
-  <mat-card-subtitle>Subtitle</mat-card-subtitle>
-  <mat-card-content>Bacon ipsum dolor amet strip steak pork chop buffalo prosciutto boudin fatback. Biltong capicola ribeye prosciutto, tongue tail cupim venison pig ground round beef ribs tri-tip tenderloin doner. Ground round meatball pork belly leberkas, turkey picanha short loin. Prosciutto cupim pancetta chislic shankle chuck jerky salami chicken porchetta turducken short ribs pig cow. Ham shankle ribeye jowl.</mat-card-content>
+<mat-card *ngIf="loaded">
+  <mat-card-title>{{beer.name}}</mat-card-title>
+  <mat-card-subtitle>{{beer.tagline}}</mat-card-subtitle>
+  <mat-card-content>
+    <p>{{beer.description}}</p>
+    <h3>Food Pairing</h3>
+    <p>{{beer.food_pairing}}</p>
+    <h3>Brewer Tips</h3>
+    <p>{{beer.brewers_tips}}</p>
+    <h3>Ingredients</h3>
+    <div>
+      <div *ngIf="beer.ingredients.malt">
+        <strong>Malts: </strong>
+        <span *ngFor="let malt of beer.ingredients.malt">{{malt.amount.value}} {{malt.amount.unit}} of {{malt.name}}, </span>
+      </div>
+      <div *ngIf="beer.ingredients.hops">
+        <strong>Hops: </strong>
+        <span *ngFor="let hop of beer.ingredients.hops">{{hop.amount.value}} {{hop.amount.unit}} of {{hop.name}}, </span>
+      </div>
+      <div *ngIf="beer.ingredients.yeast">
+        <strong>Yeast: </strong>
+        <span>{{beer.ingredients.yeast}}</span>
+      </div>
+    </div>
+    <h3>Preparation Method</h3>
+    <div>
+      <div *ngIf="beer.method.mash_temp">
+        <strong>Mash Temp: </strong>
+        <span *ngFor="let mt of beer.method.mash_temp">{{mt.temp.value}} {{mt.temp.unit}} during {{mt.duration}} hours, </span>
+      </div>
+      <div *ngIf="beer.method.fermentation">
+        <strong>Fermentation: </strong>
+        <span>{{beer.method.fermentation.temp.value}} {{beer.method.fermentation.temp.unit}} </span>
+      </div>
+      <div *ngIf="beer.method.twist">
+        <strong>Twist: </strong><span>{{beer.method.twist}}</span>
+      </div>
+    </div>
+    <p></p>
+    <mat-grid-list cols="2" rowHeight="2em">
+      <mat-grid-tile><strong>First Brewed</strong></mat-grid-tile>
+      <mat-grid-tile>{{beer.first_brewed}}</mat-grid-tile>
+
+      <mat-grid-tile><strong>PH</strong></mat-grid-tile>
+      <mat-grid-tile>{{beer.ph}}</mat-grid-tile>
+
+      <mat-grid-tile><strong>ABV</strong></mat-grid-tile>
+      <mat-grid-tile>{{beer.abv}}</mat-grid-tile>
+
+      <mat-grid-tile><strong>IBU</strong></mat-grid-tile>
+      <mat-grid-tile>{{beer.ibu}}</mat-grid-tile>
+
+      <mat-grid-tile><strong>Target FG</strong></mat-grid-tile>
+      <mat-grid-tile>{{beer.target_fg}}</mat-grid-tile>
+
+      <mat-grid-tile><strong>Target OG</strong></mat-grid-tile>
+      <mat-grid-tile>{{beer.target_og}}</mat-grid-tile>
+
+      <mat-grid-tile><strong>EBC</strong></mat-grid-tile>
+      <mat-grid-tile>{{beer.ebc}}</mat-grid-tile>
+
+      <mat-grid-tile><strong>SRM</strong></mat-grid-tile>
+      <mat-grid-tile>{{beer.srm}}</mat-grid-tile>
+
+      <mat-grid-tile><strong>Attenuation Level</strong></mat-grid-tile>
+      <mat-grid-tile>{{beer.attenuation_level}}</mat-grid-tile>
+
+      <mat-grid-tile><strong>Volume</strong></mat-grid-tile>
+      <mat-grid-tile>{{beer.volume.value}} {{beer.volume.unit}}</mat-grid-tile>
+
+      <mat-grid-tile><strong>Boil Volume</strong></mat-grid-tile>
+      <mat-grid-tile>{{beer.boil_volume.value}} {{beer.boil_volume.unit}}</mat-grid-tile>
+    </mat-grid-list>
+  </mat-card-content>
 </mat-card>
