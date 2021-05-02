@@ -17,8 +17,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SidenavModule } from './sidenav/sidenav.module';
 import { TopbarModule } from './topbar/topbar.module';
+import { SearchModule } from './search/search.module';
 
 import { CreateBeerComponent } from './create-beer/create-beer.component';
+
 
 @NgModule({
   declarations: [
@@ -41,6 +43,7 @@ import { CreateBeerComponent } from './create-beer/create-beer.component';
     
     SidenavModule,
     TopbarModule,
+    SearchModule,
 
     BrowserAnimationsModule
   ],

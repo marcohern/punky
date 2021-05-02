@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CreateBeerComponent } from './create-beer/create-beer.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
+import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
   { path: 'create-beer', component: CreateBeerComponent },
-  { path: 'search', component: SidenavComponent }
+  { path: 'search', component: SearchComponent }
 ];
 
 @NgModule({
