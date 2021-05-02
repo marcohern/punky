@@ -17,8 +17,27 @@ export class ChartComponent implements OnInit {
   selected: any[] = [];
   filteredOptions: Observable<any[]> = EMPTY;
 
+  single = [];
+  multi = [];
+
+  view:any[2] = [700, 400];
+
+  // options
+  showXAxis = true;
+  showYAxis = true;
+  gradient = false;
+  showLegend = true;
+  showXAxisLabel = true;
+  xAxisLabel = 'Country';
+  showYAxisLabel = true;
+  yAxisLabel = 'Population';
+
+  colorScheme = {
+    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+  };
+
   constructor(private punky:PunkyapiService) {
-    console.log("init", this.name.value);
+    Object.assign(this, this.single);
     this.filteredOptions = this.name.valueChanges
       .pipe(
         startWith(''),
@@ -36,6 +55,9 @@ export class ChartComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+  onSelect(event:Event) {
+    console.log(event);
   }
 
   itemSelected(event:MatAutocompleteSelectedEvent): void {

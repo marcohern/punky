@@ -7,6 +7,7 @@ import { MatChipsModule } from '@angular/material/chips';
 
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { PunkyapiModule } from '../punkyapi/punkyapi.module';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { ChartComponent } from './chart.component';
 
@@ -24,7 +25,8 @@ import { ChartComponent } from './chart.component';
     MatChipsModule,
     FormsModule,
     ReactiveFormsModule,
-    PunkyapiModule
+    PunkyapiModule,
+    NgxChartsModule
   ]
 })
 export class ChartModule { }
