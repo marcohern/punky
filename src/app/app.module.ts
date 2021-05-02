@@ -7,11 +7,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { SidenavModule } from './sidenav/sidenav.module';
-import { TopbarModule } from './topbar/topbar.module';
-import { SearchModule } from './search/search.module';
-import { BeerModule } from './beer/beer.module';
+import { SidenavModule        } from './sidenav/sidenav.module';
+import { TopbarModule         } from './topbar/topbar.module';
+import { SearchModule         } from './search/search.module';
+import { BeerModule           } from './beer/beer.module';
 import { PunkyapiModule       } from './punkyapi/punkyapi.module';
+import { ChartModule          } from './chart/chart.module';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
@@ -28,6 +29,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     BeerModule,
     PunkyapiModule,
     MatProgressBarModule,
+    ChartModule,
 
     BrowserAnimationsModule
   ],
