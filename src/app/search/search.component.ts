@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PunkyapiService } from '../punkyapi/punkyapi.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-search',
@@ -8,6 +9,10 @@ import { PunkyapiService } from '../punkyapi/punkyapi.service';
 })
 export class SearchComponent implements OnInit {
 
+  isLoading():boolean {
+    get: { return this.punky.loading; }
+  };
+
   constructor(private punky:PunkyapiService) { }
 
   ngOnInit(): void {
@@ -15,7 +20,8 @@ export class SearchComponent implements OnInit {
   }
 
   search(): void {
-    this.punky.query("Buzz").subscribe((data) => {
+  
+    this.punky.query({beer_name: "Axe"}).subscribe((data) => {
       console.log("search", data);
     });
   }
