@@ -1,4 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { HelpComponent } from '../help/help.component';
 
 @Component({
   selector: 'punky-topbar',
@@ -7,7 +9,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class TopbarComponent implements OnInit {
 
-  constructor() { 
+  constructor(public dialog: MatDialog) { 
     
   }
 
@@ -18,6 +20,12 @@ export class TopbarComponent implements OnInit {
 
   clickMenu(e:Event) {
     this.clickMenuEvent.emit(e);
+  }
+
+  clickHelp(e:Event) {
+    this.dialog.open(HelpComponent, {
+      width: '400px'
+    });
   }
 
 }
