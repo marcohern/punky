@@ -2,6 +2,18 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.11.
 
+## Running with Docker
+
+Make sure you have the latest version of docker installed. Next, run the following commands in your console in the project root directory.
+
+```bash
+ng build --prod
+docker build -t punky .
+docker run -p 80:80 punky
+```
+
+The app should be running in containerized form. Open your browser and type http://localhost.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
