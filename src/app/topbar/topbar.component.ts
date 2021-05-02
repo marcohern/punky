@@ -17,7 +17,6 @@ export class TopbarComponent implements OnInit {
   @Output('clickMenu') clickMenuEvent: EventEmitter<Event> = new EventEmitter<Event>();
 
   clickMenu(e:Event) {
-    console.log("clickMenu");
     this.clickMenuEvent.emit(e);
   }
 

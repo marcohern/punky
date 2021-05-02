@@ -20,11 +20,14 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
 
   }
+  
+  isLoading():boolean {
+    get: { return this.punky.loading; }
+  };
 
   search(): void {
     this.beers = [];
     this.punky.query({beer_name: this.name}).subscribe((data) => {
-      console.log("search", data);
       this.beers = data;
     });
   }

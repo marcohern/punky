@@ -14,10 +14,6 @@ export class AppComponent implements OnInit {
   constructor(private punky:PunkyapiService) {
 
   }
-  
-  isLoading():boolean {
-    get: { return this.punky.loading; }
-  };
 
   ngOnInit(): void {
 

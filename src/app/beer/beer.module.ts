@@ -4,6 +4,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { RouterModule } from '@angular/router';
 import { PunkyapiModule } from '../punkyapi/punkyapi.module';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 import { BeerComponent } from './beer.component';
 
@@ -16,6 +17,7 @@ import { BeerComponent } from './beer.component';
     CommonModule,
     MatCardModule,
     MatGridListModule,
+    MatProgressBarModule,
     RouterModule,
     PunkyapiModule
   ],

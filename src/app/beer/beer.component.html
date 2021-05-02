@@ -1,3 +1,4 @@
+<mat-progress-bar mode="indeterminate" *ngIf="isLoading()"></mat-progress-bar>
 <mat-card *ngIf="loaded">
   <mat-card-title>{{beer.name}}</mat-card-title>
   <mat-card-subtitle>{{beer.tagline}}</mat-card-subtitle>

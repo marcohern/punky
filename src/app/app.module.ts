@@ -13,7 +13,6 @@ import { SearchModule         } from './search/search.module';
 import { BeerModule           } from './beer/beer.module';
 import { PunkyapiModule       } from './punkyapi/punkyapi.module';
 import { ChartModule          } from './chart/chart.module';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -28,7 +27,6 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     SearchModule,
     BeerModule,
     PunkyapiModule,
-    MatProgressBarModule,
     ChartModule,
 
     BrowserAnimationsModule

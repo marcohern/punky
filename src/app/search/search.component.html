@@ -3,4 +3,5 @@
   <input [(ngModel)]="name" matInput>
 </mat-form-field>
 <button mat-raised-button color="primary" (click)="search()"><mat-icon>search</mat-icon> Search</button>
+<mat-progress-bar mode="indeterminate" *ngIf="isLoading()"></mat-progress-bar>
 <punky-beers [beers]="beers"></punky-beers>
