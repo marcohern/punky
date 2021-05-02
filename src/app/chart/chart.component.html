@@ -13,10 +13,10 @@
   <mat-chip *ngFor="let item of selected">{{item.name}}</mat-chip>
 </mat-chip-list>
 
-<ngx-charts-bar-vertical
+<ngx-charts-bar-vertical-2d
   [view]="view"
   [scheme]="colorScheme"
-  [results]="single"
+  [results]="chartData"
   [gradient]="gradient"
   [xAxis]="showXAxis"
   [yAxis]="showYAxis"
@@ -25,5 +25,8 @@
   [showYAxisLabel]="showYAxisLabel"
   [xAxisLabel]="xAxisLabel"
   [yAxisLabel]="yAxisLabel"
-  (select)="onSelect($event)">
-</ngx-charts-bar-vertical>
+  (select)="chartItemSelected($event)"
+  (activate)="chartActivate($event)"
+  (deactivate)="chartDeactivate($event)"
+  >
+</ngx-charts-bar-vertical-2d>
