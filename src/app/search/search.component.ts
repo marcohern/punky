@@ -13,7 +13,11 @@ export class SearchComponent implements OnInit {
     get: { return this.punky.loading; }
   };
 
-  constructor(private punky:PunkyapiService) { }
+  beers: any[];
+
+  constructor(private punky:PunkyapiService) { 
+    this.beers = [];
+  }
 
   ngOnInit(): void {
 
@@ -23,6 +27,7 @@ export class SearchComponent implements OnInit {
   
     this.punky.query({beer_name: "Axe"}).subscribe((data) => {
       console.log("search", data);
+      this.beers = data;
     });
   }
 

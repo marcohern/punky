@@ -1,13 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-beers',
+  selector: 'punky-beers',
   templateUrl: './beers.component.html',
   styleUrls: ['./beers.component.css']
 })
 export class BeersComponent implements OnInit {
 
-  constructor() { }
+  @Input() beers: any[];
+
+  constructor() {
+    this.beers = [];
+  }
 
   ngOnInit(): void {
   }

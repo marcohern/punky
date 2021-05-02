@@ -32,7 +32,7 @@ export class PunkyapiService {
 
   private get<T>(uri: string, params: {[param: string]: string}): Observable<T> {
     this.loading = true;
-    return this.client.get<T>(environment.host + 'v2/beerssssss', { 
+    return this.client.get<T>(environment.host + uri, { 
       params: params,
       headers: this.headers()
     }).pipe(
@@ -47,6 +47,6 @@ export class PunkyapiService {
   }
 
   query(params: {[param: string]: string}): Observable<any> {
-    return this.get<any>('v2/beerssssss', params);
+    return this.get<any>('v2/beers', params);
   }
 }

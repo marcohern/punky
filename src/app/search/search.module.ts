@@ -9,6 +9,8 @@ import { MatIconModule        } from '@angular/material/icon';
 import { MatSelectModule      } from '@angular/material/select';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatInputModule       } from '@angular/material/input';
+
+import { BeersModule } from '../beers/beers.module';
 import { PunkyapiModule       } from '../punkyapi/punkyapi.module';
 
 
@@ -26,7 +28,8 @@ import { PunkyapiModule       } from '../punkyapi/punkyapi.module';
     MatProgressBarModule,
     PunkyapiModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BeersModule
   ]
 })
 export class SearchModule { }
