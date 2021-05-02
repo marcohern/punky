@@ -81,6 +81,12 @@ export class ChartComponent implements OnInit {
       this.chartData[4].series.push({name: item.name, value: item.ph||0});
     }
   }
+
+  selectedBeerHilighted(event:Event, sel:any) {
+    this.selected = this.selected.filter(item => item.id !== sel.id);
+    this.generateData();
+  }
+
   chartItemSelected(event:Event) {
     //console.log(event);
   }
