@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
+import { RouterModule } from '@angular/router';
 import { BeerComponent } from './beer.component';
-
 
 
 @NgModule({
@@ -9,7 +10,9 @@ import { BeerComponent } from './beer.component';
     BeerComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatCardModule,
+    RouterModule
   ],
   exports: [
     BeerComponent

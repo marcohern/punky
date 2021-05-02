@@ -11,6 +11,8 @@ import { SidenavModule } from './sidenav/sidenav.module';
 import { TopbarModule } from './topbar/topbar.module';
 import { SearchModule } from './search/search.module';
 import { BeerModule } from './beer/beer.module';
+import { PunkyapiModule       } from './punkyapi/punkyapi.module';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { BeerModule } from './beer/beer.module';
     TopbarModule,
     SearchModule,
     BeerModule,
+    PunkyapiModule,
+    MatProgressBarModule,
 
     BrowserAnimationsModule
   ],

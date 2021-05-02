@@ -9,9 +9,6 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class SearchComponent implements OnInit {
 
-  isLoading():boolean {
-    get: { return this.punky.loading; }
-  };
 
   beers: any[];
   name: string = '';

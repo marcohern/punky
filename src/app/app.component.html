@@ -5,6 +5,7 @@
     <punky-sidenav></punky-sidenav>
   </mat-sidenav>
   <mat-sidenav-content class="content">
+    <mat-progress-bar mode="indeterminate" *ngIf="isLoading()"></mat-progress-bar>
     <router-outlet></router-outlet>
     <br><br><br><br><br><br><br><br><br><br>
   </mat-sidenav-content>

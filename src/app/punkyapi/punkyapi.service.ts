@@ -49,4 +49,8 @@ export class PunkyapiService {
   query(params: {[param: string]: string}): Observable<any> {
     return this.get<any>('v2/beers', params);
   }
+
+  getBeer(id:string|null): Observable<any> {
+    return this.get<any>('v2/beer/'+id, {});
+  }
 }
