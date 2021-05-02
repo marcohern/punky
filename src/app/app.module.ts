@@ -19,23 +19,14 @@ import { SidenavModule } from './sidenav/sidenav.module';
 import { TopbarModule } from './topbar/topbar.module';
 import { SearchModule } from './search/search.module';
 
-import { CreateBeerComponent } from './create-beer/create-beer.component';
-
-
 @NgModule({
   declarations: [
-    AppComponent,
-    CreateBeerComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-
-    MatButtonModule,
-    MatFormFieldModule,
-    MatIconModule,
     MatSidenavModule,
-    
     SidenavModule,
     TopbarModule,
     SearchModule,
