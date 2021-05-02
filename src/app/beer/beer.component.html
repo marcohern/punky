@@ -11,11 +11,11 @@
     <div>
       <div *ngIf="beer.ingredients.malt">
         <strong>Malts: </strong>
-        <span *ngFor="let malt of beer.ingredients.malt">{{malt.amount.value}} {{malt.amount.unit}} of {{malt.name}}, </span>
+        <span *ngFor="let malt of beer.ingredients.malt">{{malt.amount.value}} {{malt.amount.unit}} of {{malt.name}}, </span>...
       </div>
       <div *ngIf="beer.ingredients.hops">
         <strong>Hops: </strong>
-        <span *ngFor="let hop of beer.ingredients.hops">{{hop.amount.value}} {{hop.amount.unit}} of {{hop.name}}, </span>
+        <span *ngFor="let hop of beer.ingredients.hops">{{hop.amount.value}} {{hop.amount.unit}} of {{hop.name}}, </span>...
       </div>
       <div *ngIf="beer.ingredients.yeast">
         <strong>Yeast: </strong>
@@ -26,7 +26,7 @@
     <div>
       <div *ngIf="beer.method.mash_temp">
         <strong>Mash Temp: </strong>
-        <span *ngFor="let mt of beer.method.mash_temp">{{mt.temp.value}} {{mt.temp.unit}} during {{mt.duration}} hours, </span>
+        <span *ngFor="let mt of beer.method.mash_temp">{{mt.temp.value}} {{mt.temp.unit}} during {{mt.duration}} hours, </span>...
       </div>
       <div *ngIf="beer.method.fermentation">
         <strong>Fermentation: </strong>
