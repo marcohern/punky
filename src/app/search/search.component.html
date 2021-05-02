@@ -1,7 +1,7 @@
 <mat-form-field appearance="fill">
   <mat-label>Name</mat-label>
-  <input name="name" matInput>
+  <input [(ngModel)]="name" matInput>
 </mat-form-field>
-<button mat-icon-button (click)="search()"><mat-icon>search</mat-icon> Search</button>
+<button mat-raised-button color="primary" (click)="search()"><mat-icon>search</mat-icon> Search</button>
 <mat-progress-bar mode="indeterminate" *ngIf="isLoading()"></mat-progress-bar>
 <punky-beers [beers]="beers"></punky-beers>

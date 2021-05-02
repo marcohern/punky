@@ -14,6 +14,7 @@ export class SearchComponent implements OnInit {
   };
 
   beers: any[];
+  name: string = '';
 
   constructor(private punky:PunkyapiService) { 
     this.beers = [];
@@ -24,8 +25,8 @@ export class SearchComponent implements OnInit {
   }
 
   search(): void {
-  
-    this.punky.query({beer_name: "Axe"}).subscribe((data) => {
+    this.beers = [];
+    this.punky.query({beer_name: this.name}).subscribe((data) => {
       console.log("search", data);
       this.beers = data;
     });

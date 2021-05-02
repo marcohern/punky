@@ -1,6 +1,8 @@
 <mat-list *ngIf="beers.length > 0">
   <mat-list-item *ngFor="let beer of beers">
+    <img *ngIf="beer.image_url" class="img-responsive" matListAvatar [src]="beer.image_url" [alt]="beer.name">
+    <img *ngIf="beer.image_url===null" class="img-responsive" matListAvatar src="/assets/beer.png" [alt]="beer.name">
     <h3 matLine> {{beer.name}} </h3>
-    <p matLine> {{beer.taglines}} </p>
+    <p matLine> {{beer.tagline}} </p>
   </mat-list-item>
 </mat-list>
