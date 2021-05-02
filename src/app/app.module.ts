@@ -34,12 +34,7 @@ import { CreateBeerComponent } from './create-beer/create-beer.component';
     MatButtonModule,
     MatFormFieldModule,
     MatIconModule,
-    MatInputModule,
-    MatMenuModule,
-    MatTabsModule,
-    MatToolbarModule,
     MatSidenavModule,
-    MatSliderModule,
     
     SidenavModule,
     TopbarModule,
