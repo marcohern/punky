@@ -5,7 +5,9 @@
   <mat-card-content>
     <p>{{beer.description}}</p>
     <h3>Food Pairing</h3>
-    <p>{{beer.food_pairing}}</p>
+    <ul>
+      <li *ngFor="let pairing of beer.food_pairing">{{pairing}}</li>
+    </ul>
     <h3>Brewer Tips</h3>
     <p>{{beer.brewers_tips}}</p>
     <h3>Ingredients</h3>

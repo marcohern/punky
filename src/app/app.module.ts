@@ -13,6 +13,7 @@ import { SearchModule         } from './search/search.module';
 import { BeerModule           } from './beer/beer.module';
 import { PunkyapiModule       } from './punkyapi/punkyapi.module';
 import { ChartModule          } from './chart/chart.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,10 @@ import { ChartModule          } from './chart/chart.module';
     PunkyapiModule,
     ChartModule,
 
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

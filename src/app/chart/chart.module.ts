@@ -1,5 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatChipsModule } from '@angular/material/chips';
+
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { PunkyapiModule } from '../punkyapi/punkyapi.module';
+
 import { ChartComponent } from './chart.component';
 
 
@@ -9,7 +17,14 @@ import { ChartComponent } from './chart.component';
     ChartComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatAutocompleteModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatChipsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    PunkyapiModule
   ]
 })
 export class ChartModule { }
