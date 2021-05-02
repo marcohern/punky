@@ -2,7 +2,7 @@
   <mat-list-item *ngFor="let beer of beers">
     <img *ngIf="beer.image_url" class="img-responsive" matListAvatar [src]="beer.image_url" [alt]="beer.name">
     <img *ngIf="beer.image_url===null" class="img-responsive" matListAvatar src="/assets/beer.png" [alt]="beer.name">
-    <h3 matLine> {{beer.name}} </h3>
+    <h3 matLine> <a [routerLink]="['/beer', beer.id]">{{beer.name}}</a> </h3>
     <p matLine> {{beer.tagline}} </p>
   </mat-list-item>
 </mat-list>

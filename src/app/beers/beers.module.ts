@@ -6,6 +6,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 
 import { BeersComponent } from './beers.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BeersComponent } from './beers.component';
     MatButtonModule,
     MatListModule,
     MatIconModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    RouterModule
   ],
   exports: [
     BeersComponent

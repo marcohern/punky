@@ -10,7 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavModule } from './sidenav/sidenav.module';
 import { TopbarModule } from './topbar/topbar.module';
 import { SearchModule } from './search/search.module';
-import { BeersModule } from './beers/beers.module';
+import { BeerModule } from './beer/beer.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import { BeersModule } from './beers/beers.module';
     SidenavModule,
     TopbarModule,
     SearchModule,
-    BeersModule,
+    BeerModule,
 
     BrowserAnimationsModule
   ],
