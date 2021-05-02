@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'punky-topbar',
@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopbarComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    
+  }
 
   ngOnInit(): void {
   }

@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-sidenav',
+  selector: 'punky-sidenav',
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.css']
 })
 export class SidenavComponent implements OnInit {
+  
+  events: string[] = [];
+  opened: boolean = false;
 
   constructor() { }
 

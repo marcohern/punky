@@ -1,11 +1,8 @@
-<punky-topbar></punky-topbar>
+<punky-topbar (sidenav)="sidenav"></punky-topbar>
 
 <mat-sidenav-container>
   <mat-sidenav #sidenav class="sidenav" mode="side" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')">
-    <button mat-icon-button>
-      <mat-icon>menu</mat-icon>
-      Test
-    </button>
+    <punky-sidenav></punky-sidenav>
   </mat-sidenav>
   <mat-sidenav-content class="content">
     <router-outlet></router-outlet>
