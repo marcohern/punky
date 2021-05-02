@@ -1,4 +1,4 @@
-<punky-topbar (sidenav)="sidenav"></punky-topbar>
+<punky-topbar (clickMenu)="toggleSidenav()"></punky-topbar>
 
 <mat-sidenav-container>
   <mat-sidenav #sidenav class="sidenav" mode="side" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')">

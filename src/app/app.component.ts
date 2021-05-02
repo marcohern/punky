@@ -13,4 +13,8 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
 
   }
+
+  toggleSidenav() {
+    this.opened = !this.opened;
+  }
 }
