@@ -1,6 +1,7 @@
-import { HttpClientModule } from '@angular/common/http';
-import { TestBed } from '@angular/core/testing';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TestBed, waitForAsync } from '@angular/core/testing';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { Observable } from 'rxjs';
 import { PunkyapiModule } from './punkyapi.module';
 
 import { PunkyapiService } from './punkyapi.service';
@@ -11,6 +12,9 @@ describe('PunkyapiService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientModule, MatSnackBarModule],
+      providers: [
+        HttpClient
+      ]
   });
     service = TestBed.inject(PunkyapiService);
   });
@@ -19,9 +23,17 @@ describe('PunkyapiService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should get beer 1', () => {
-    service.getBeer('1').subscribe(data => {
-      expect(data.id).toBe('1');
+  it('#should get beer 1', (done: DoneFn) => {
+    service.getBeer('1').subscribe(value => {
+      expect(value[0].id).toBe(1);
+      done();
     });
-  })
+  });
+
+  it('#should find a list of beers', (done: DoneFn) => {
+    service.query({beer_name: 'Maria'}).subscribe(value => {
+      expect(value.length).toBeGreaterThan(0);
+      done();
+    });
+  });
 });
