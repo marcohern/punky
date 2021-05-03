@@ -34,14 +34,14 @@ describe('TopbarComponent', () => {
 
   it('on click menu, event should trigger', () => {
     spyOn(component.clickMenuEvent, 'emit');
-    fixture.detectChanges();
+    //fixture.detectChanges();
     fixture.debugElement.query(By.css('.menu')).nativeElement.click();
     expect(component.clickMenuEvent.emit).toHaveBeenCalled();
   });
 
   it('on click help, dialog should open', () => {
     spyOn(component.dialog, 'open');
-    fixture.detectChanges();
+    //fixture.detectChanges();
     fixture.debugElement.query(By.css('.help')).nativeElement.click();
     expect(component.dialog.open).toHaveBeenCalled();
   });
