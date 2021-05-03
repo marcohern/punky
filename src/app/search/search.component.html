@@ -2,6 +2,46 @@
   <mat-label>Name</mat-label>
   <input [(ngModel)]="name" matInput>
 </mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Yeast</mat-label>
+  <input [(ngModel)]="yeast" matInput>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Hops</mat-label>
+  <input [(ngModel)]="hops" matInput>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Malt</mat-label>
+  <input [(ngModel)]="malt" matInput>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Paired Food</mat-label>
+  <input [(ngModel)]="food" matInput>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Min ABV</mat-label>
+  <input [(ngModel)]="min_abv" matInput>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Max ABV</mat-label>
+  <input [(ngModel)]="max_abv" matInput>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Min IBU</mat-label>
+  <input [(ngModel)]="min_ibu" matInput>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Max IBU</mat-label>
+  <input [(ngModel)]="max_ibu" matInput>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Min EBC</mat-label>
+  <input [(ngModel)]="min_ebc" matInput>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Max EBC</mat-label>
+  <input [(ngModel)]="max_ebc" matInput>
+</mat-form-field>
 <button mat-raised-button color="primary" (click)="search()"><mat-icon>search</mat-icon> Search</button>
 <mat-progress-bar mode="indeterminate" *ngIf="isLoading()"></mat-progress-bar>
 <punky-beers [beers]="beers"></punky-beers>
